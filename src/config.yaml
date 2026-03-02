@@ -1,6 +1,6 @@
 site:
   name: SSS Health Solutions
-  site: 'https://astrowind.vercel.app'
+  site: 'https://ssshealthsolutions.com'
   base: '/'
   trailingSlash: false
 
@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: SSS Health Solutions
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/sss-logo.png'
         width: 1200
         height: 628
     type: website
