@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: SSS Health Solutions
     images:
-      - url: '~/assets/images/sss-logo.png'
+      - url: '~/assets/images/sss-logo-title.png'
         width: 1200
         height: 628
     type: website
