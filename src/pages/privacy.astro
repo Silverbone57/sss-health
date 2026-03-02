@@ -1,0 +1,17 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'Privacy Policy | SSS Health Solutions' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText title="Privacy Policy" />
+  <section class="px-4 py-16 max-w-4xl mx-auto">
+    <div class="prose dark:prose-invert">
+      <p>At <strong>SSS Health Solutions LLC</strong>, we respect your privacy. We collect your name, email, and phone number solely to provide requested insurance quotes.</p>
+      <p>We do not sell your data. Your information is only shared with specific insurance carriers necessary for your enrollment.</p>
+      <p>By submitting a form, you consent to be contacted by a licensed agent regarding health insurance options.</p>
+    </div>
+  </section>
+</Layout>
