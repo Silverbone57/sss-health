@@ -7,23 +7,15 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'About Us | SSS Health Solutions',
-  ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero
     tagline="Our Story"
-  >
-    <Fragment slot="title">
-      Built on Family. <br />
-      <span class="text-accent dark:text-white highlight">Driven by Integrity.</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      SSS Health Solutions was founded by brothers who saw a critical flaw in the health insurance industry: too much jargon, too many high-pressure sales tactics, and not enough genuine advisory. We built this independent agency to change that.
-    </Fragment>
-  </Hero>
+    title="Built on Family. Driven by Integrity."
+    subtitle="SSS Health Solutions was founded by brothers who saw a flaw in the health insurance industry. We built this independent agency to provide genuine advisory over high-pressure sales."
+  />
 
   <Content
     id="founder"
@@ -38,49 +30,23 @@ const metadata = {
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Mobinu Shadhin</h2>
       <p class="text-secondary font-medium mb-4">Founder & Principal Agent (NPN: 21430983)</p>
       <p class="mb-4 text-gray-600 dark:text-gray-400">
-        As the principal agent, Mobinu brings a unique background in high-stakes sales and behavioral psychology to the insurance world.
+        As the principal agent, Mobinu brings a unique background in high-stakes sales and behavioral psychology to the insurance world. Licensed in several states, his focus is on navigating complex regulatory frameworks to deliver private, under-65 health plans that truly fit the client.
       </p>
     </Fragment>
   </Content>
 
   <Steps2
     title="Our Core Values"
-    subtitle="The principles that guide every client interaction."
     items={[
-      {
-        title: 'Radical Transparency',
-        description: 'We explain exactly what is covered, what is not, and how we are compensated. No hidden clauses.',
-        icon: 'tabler:eye',
-      },
-      {
-        title: 'Family-First Approach',
-        description: 'As a family-owned agency, we treat your coverage as if we were protecting our own siblings and parents.',
-        icon: 'tabler:users',
-      },
-      {
-        title: 'Uncompromised Compliance',
-        description: 'We adhere strictly to state and federal regulations, operating with the highest ethical standards in the industry.',
-        icon: 'tabler:shield-check',
-      },
+      { title: 'Transparency', description: 'We explain exactly what is covered and how we are compensated.', icon: 'tabler:eye' },
+      { title: 'Family-First', description: 'We treat your coverage as if we were protecting our own family.', icon: 'tabler:users' },
+      { title: 'Compliance', description: 'We adhere strictly to all state and federal regulations.', icon: 'tabler:shield-check' },
     ]}
   />
 
   <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Schedule a Consultation',
-        href: '/contact',
-        icon: 'tabler:phone',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Let's find your perfect plan.
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Reach out today to speak directly with a licensed professional. No automated bots, just real advice.
-    </Fragment>
-  </CallToAction>
+    actions={[{ variant: 'primary', text: 'Schedule a Consultation', href: '/contact', icon: 'tabler:phone' }]}
+    title="Let's find your perfect plan."
+    subtitle="Reach out today to speak directly with a licensed professional."
+  />
 </Layout>
