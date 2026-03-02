@@ -14,104 +14,45 @@ const metadata = {
 <Layout metadata={metadata}>
   <Hero
     actions={[
-      {
-        variant: 'primary',
-        text: 'Get a Free Consultation',
-        href: '/contact',
-        icon: 'tabler:clipboard-check',
-      },
+      { variant: 'primary', text: 'Get a Free Consultation', href: '/contact', icon: 'tabler:clipboard-check' },
       { text: 'Explore Services', href: '#features' },
     ]}
     image={{
-      src: '~/assets/images/hero-image.png',
-      alt: 'SSS Health Solutions Professional Consulting',
+      src: '~/assets/images/sss-logo-title.jpg',
+      alt: 'SSS Health Solutions - Maximum Coverage and Affordability',
     }}
   >
     <Fragment slot="title">
-      Navigate Your Health Coverage with <span class="text-accent dark:text-white highlight">Confidence</span>
+      Navigate Your Health Coverage with <span class="text-secondary dark:text-white highlight">Confidence</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">SSS Health Solutions LLC</span> is an independent agency specializing in Under-65 Private Health Insurance.
-      </span>
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">Expert Insurance Advisory.</span>
-      We bridge the gap between complex policies and your peace of mind. Proudly partnered with top carriers to serve clients across 12 states.
+      <span class="font-semibold">SSS Health Solutions LLC</span> is an independent agency specializing in Under-65 Private Health Insurance. We bridge the gap between complex policies and your peace of mind. Proudly partnered with top-tier carriers to serve clients across several states.
     </Fragment>
   </Hero>
 
   <Features
     id="features"
-    tagline="Under-65 Health Coverage"
-    title="Insurance that actually makes sense."
-    subtitle="We specialize exclusively in private health insurance for individuals and families. No confusing jargon, just clear options balanced for your health needs and your budget."
+    tagline="Our Services"
+    title="Insurance tailored to you."
     items={[
-      {
-        title: 'Individual & Family Plans',
-        description:
-          'Comprehensive health coverage designed to protect you and your loved ones. We find plans that cover your specific doctors, prescriptions, and lifestyle.',
-        icon: 'tabler:users',
-      },
-      {
-        title: 'Private Network Health (PPO)',
-        description:
-          'Access elite nationwide networks through top-tier carriers like UnitedHealthcare (UHC) and LifeX for maximum flexibility and premium care.',
-        icon: 'tabler:shield-check',
-      },
-      {
-        title: 'Expert Plan Matching',
-        description:
-          'As an independent agency, we work for you, not the insurance companies. We analyze the market to match you with the exact right policy without the aggressive sales pitch.',
-        icon: 'tabler:adjustments-horizontal',
-      },
+      { title: 'Individual & Family Plans', description: 'Comprehensive coverage designed to protect your health and your budget.', icon: 'tabler:users' },
+      { title: 'Private Network Health (PPO)', description: 'Access elite nationwide networks through carriers like UHC and LifeX.', icon: 'tabler:shield-check' },
+      { title: 'Expert Plan Matching', description: 'Unbiased advisory to find the exact right policy for your specific needs.', icon: 'tabler:adjustments-horizontal' },
     ]}
   />
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Clear answers to help you navigate your private health coverage."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
+    title="FAQs"
     items={[
-      {
-        title: 'When can I enroll in a private health plan?',
-        description:
-          'Right now. Unlike government ACA plans that restrict you to an Annual Open Enrollment Period, you can apply and enroll in our private health plans 365 days a year. There is no need to wait for a Special Enrollment Period (SEP) to get covered.',
-      },
-      {
-        title: 'Do I qualify for Under-65 Private Health Insurance?',
-        description:
-          'If you are under 65, relatively healthy, and need coverage outside of an employer-sponsored plan, you likely qualify. We help individuals, families, and self-employed professionals find the right fit.',
-      },
-      {
-        title: 'Does it cost me anything to use your agency?',
-        description:
-          'No. Our advisory services are 100% free to you. We are compensated directly by the carriers when we match you with a policy, meaning your monthly premium is exactly the same whether you use us or do it yourself.',
-      },
-      {
-        title: 'Can I keep my current doctor?',
-        description:
-          'In most cases, yes. When we design your coverage profile, we check the private PPO networks to ensure your primary care physicians and preferred specialists are in-network.',
-      },
+      { title: 'When can I enroll?', description: 'Right now. Our private plans are available 365 days a year—no need for Open Enrollment.' },
+      { title: 'Does it cost anything to use your agency?', description: 'No. Our advisory services are 100% free to you.' },
     ]}
   />
 
   <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Contact Us Today',
-        href: '/contact',
-        icon: 'tabler:mail',
-      },
-    ]}
+    actions={[{ variant: 'primary', text: 'Contact Us Today', href: '/contact', icon: 'tabler:mail' }]}
   >
-    <Fragment slot="title">
-      Ready to secure your health coverage?
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Stop guessing with your healthcare. Let our licensed professionals build a plan that protects your family and fits your budget.
-    </Fragment>
+    <Fragment slot="title">Ready to secure your health coverage?</Fragment>
   </CallToAction>
 </Layout>
