@@ -177,6 +177,9 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
   ],
   footNote: `
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/arthelokyo"> Arthelokyo</a> · All rights reserved.
+    <strong>SSS Health Solutions LLC</strong><br />
+    National Producer Number (NPN): 21430983<br />
+    Licensed for Life & Health in FL, SC, VA, AR, MI, OH, TX, TN, MS, MD, KS, and IA.<br />
+    <span class="text-sm text-gray-500 dark:text-gray-400">Not affiliated with the U.S. government or the federal Medicare program.</span>
   `,
 };
