@@ -1,78 +1,69 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contact | SSS Health Solutions',
+  ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+  <HeroText tagline="Contact Us" title="Let's find your perfect plan." />
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <div class="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full mb-10">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      
+      <input type="hidden" name="access_key" value="6c82002b-f00a-411e-aeba-8b3bad4c9661">
+      
+      <input type="hidden" name="subject" value="New Website Lead - SSS Health Solutions">
+      
+      <input type="hidden" name="redirect" value="https://ssshealthsolutions.com/contact">
 
-  <ContactUs
-    id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
-  />
+      <div class="mb-6">
+        <label for="name" class="block text-sm font-medium mb-1">Full Name</label>
+        <input type="text" name="name" id="name" required class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800" />
+      </div>
 
-  <!-- Features2 Widget ************** -->
+      <div class="mb-6">
+        <label for="email" class="block text-sm font-medium mb-1">Email Address</label>
+        <input type="email" name="email" id="email" required class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800" />
+      </div>
+
+      <div class="mb-6">
+        <label for="phone" class="block text-sm font-medium mb-1">Phone Number</label>
+        <input type="tel" name="phone" id="phone" required class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800" />
+      </div>
+
+      <div class="mb-6">
+        <label for="message" class="block text-sm font-medium mb-1">What type of coverage are you looking for?</label>
+        <textarea name="message" id="message" rows="4" required class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800" placeholder="e.g., I need health insurance for myself and my spouse..."></textarea>
+      </div>
+
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-150 ease-in-out">
+        Request Free Quote
+      </button>
+    </form>
+  </div>
 
   <Features2
     title="We are here to help!"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
         title: 'Phone',
-        description: '+1 (234) 567-890',
+        description: '(727) 304-5971',
         icon: 'tabler:headset',
       },
       {
         title: 'Email',
-        description: 'contact@support.com',
+        description: 'contact@ssshealthsolutions.com',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
+        title: 'Business Hours',
+        description: 'Monday - Friday: 9:00 AM - 8:00 PM EST',
+        icon: 'tabler:clock',
       },
     ]}
   />
