@@ -4,7 +4,6 @@ import '~/assets/styles/tailwind.css';
 import { I18N } from 'astrowind:config';
 
 import CustomStyles from '~/components/CustomStyles.astro';
-import Favicons from '~/components/common/Favicons.astro';
 import Metadata from '~/components/common/Metadata.astro';
 import SiteVerification from '~/components/common/SiteVerification.astro';
 import Analytics from '~/components/common/Analytics.astro';
@@ -27,7 +26,7 @@ const { language, textDirection } = I18N;
 <html lang={language} dir={textDirection} class="2xl:text-[20px]">
   <head>
     <CustomStyles />
-    <Favicons />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <Metadata {...metadata} />
     <SiteVerification />
     <Analytics />
