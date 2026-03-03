@@ -1,0 +1,36 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'Terms and Conditions | SSS Health Solutions' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText title="Terms and Conditions" />
+  <section class="px-4 py-16 mx-auto max-w-4xl lg:py-20">
+    <div class="prose prose-lg max-w-none dark:prose-invert dark:text-slate-400">
+      <p><strong>Effective Date:</strong> March 2026</p>
+      
+      <h3>1. Agreement to Terms</h3>
+      <p>By accessing or using the SSS Health Solutions LLC website, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our website or services.</p>
+      
+      <h3>2. Independent Advisory Services</h3>
+      <p>SSS Health Solutions LLC (NPN: 21430983) operates as an independent insurance agency. We provide advisory services and facilitate the application process for health insurance policies. <strong>We do not underwrite insurance policies, and we do not make the final decisions regarding coverage approval, exclusions, or premium rates.</strong></p>
+      
+      <h3>3. No Medical Advice</h3>
+      <p>The content provided on this website, and by our agents, is for insurance informational purposes only. We are licensed insurance brokers, not medical professionals. Nothing stated on this site should be construed as medical advice, diagnosis, or treatment.</p>
+      
+      <h3>4. Quotes and Estimates</h3>
+      <p>Any premiums or quotes provided by our agents are estimates based on the information you provide and the current pricing offered by the carriers. Final premium rates are subject to the carrier's underwriting process and may differ from initial estimates.</p>
+      
+      <h3>5. Communication Consent (TCPA)</h3>
+      <p>By submitting your contact information, you consent to receive communications from SSS Health Solutions LLC regarding your insurance inquiry via phone call, email, and SMS text message, utilizing automated technology where applicable. Consent is not a condition of purchase. You may revoke this consent at any time.</p>
+      
+      <h3>6. Governing Law</h3>
+      <p>These Terms and Conditions, and any disputes arising from your use of this website or our services, shall be governed by and construed in accordance with the laws of the State of Florida, without regard to its conflict of law principles.</p>
+      
+      <h3>7. Limitation of Liability</h3>
+      <p>To the maximum extent permitted by law, SSS Health Solutions LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our website, or from the denial of claims, premium adjustments, or policy cancellations enacted by third-party insurance carriers.</p>
+    </div>
+  </section>
+</Layout>
