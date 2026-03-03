@@ -1,55 +1,28 @@
 ---
 import '@fontsource-variable/inter';
-
-// 'DM Sans'
-// Nunito
-// Dosis
-// Outfit
-// Roboto
-// Literata
-// 'IBM Plex Sans'
-// Karla
-// Poppins
-// 'Fira Sans'
-// 'Libre Franklin'
-// Inconsolata
-// Raleway
-// Oswald
-// 'Space Grotesk'
-// Urbanist
 ---
 
 <style is:inline is:global>
   :root {
-    --aw-color-primary: rgb(30 41 59);    /* Slate Grey-Blue */
-    --aw-color-secondary: rgb(180 160 100); /* Champagne Gold */
-    --aw-color-accent: rgb(148 163 184);   /* Brushed Silver */
-
+    --aw-color-primary: rgb(30 41 59);
+    --aw-color-secondary: rgb(180 160 100);
+    --aw-color-accent: rgb(148 163 184);
+    
+    --aw-color-text-heading: rgb(15 23 42);
+    --aw-color-text-default: rgb(30 41 59);
+    --aw-color-text-muted: rgb(30 41 59 / 70%);
     --aw-color-bg-page: rgb(255 255 255);
+    --aw-color-bg-page-dark: rgb(10 10 10);
   }
 
   .dark {
     --aw-color-primary: rgb(226 232 240);
     --aw-color-secondary: rgb(180 160 100);
     --aw-color-accent: rgb(148 163 184);
-
-    --aw-color-bg-page: rgb(10 10 10); /* Pure black for your logo */
+    
+    --aw-color-text-heading: rgb(255 255 255);
+    --aw-color-text-default: rgb(226 232 240);
+    --aw-color-text-muted: rgb(226 232 240 / 70%);
+    --aw-color-bg-page: rgb(10 10 10);
   }
 </style>
-<Content
-    id="founder"
-    columns={1}
-    isReversed
-    image={{
-      src: '~/assets/images/head.png',
-      alt: 'Mobinu Shadhin - SSS Health Solutions',
-    }}
-  >
-    <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Mobinu Shadhin</h2>
-      <p class="text-secondary font-medium mb-4">Founder & Principal Agent (NPN: 21430983)</p>
-      <p class="mb-4 text-gray-600 dark:text-gray-400">
-        As the principal agent, Mobinu brings a unique background in high-stakes sales and behavioral psychology to the insurance world.
-      </p>
-    </Fragment>
-  </Content>
