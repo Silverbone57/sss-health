@@ -1,13 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Content from '~/components/widgets/Content.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-const metadata = {
-  title: 'About Us | SSS Health Solutions',
-};
+const metadata = { title: 'About Us | SSS Health Solutions' };
 ---
 
 <Layout metadata={metadata}>
@@ -17,36 +13,23 @@ const metadata = {
     subtitle="SSS Health Solutions was founded by brothers who saw a flaw in the health insurance industry. We built this independent agency to provide genuine advisory over high-pressure sales."
   />
 
-  <Content
-    id="founder"
-    columns={1}
-    isReversed
-    image={{
-      src: '~/assets/images/head.png',
-      alt: 'Mobinu Shadhin - SSS Health Solutions',
-    }}
-  >
-    <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Mobinu Shadhin</h2>
-      <p class="text-secondary font-medium mb-4">Founder & Principal Agent (NPN: 21430983)</p>
-      <p class="mb-4 text-gray-600 dark:text-gray-400">
-        As the principal agent, Mobinu brings a unique background in high-stakes sales and behavioral psychology to the insurance world. Licensed in several states, his focus is on navigating complex regulatory frameworks to deliver private, under-65 health plans that truly fit the client.
-      </p>
-    </Fragment>
-  </Content>
-
-  <Steps2
-    title="Our Core Values"
-    items={[
-      { title: 'Transparency', description: 'We explain exactly what is covered and how we are compensated.', icon: 'tabler:eye' },
-      { title: 'Family-First', description: 'We treat your coverage as if we were protecting our own family.', icon: 'tabler:users' },
-      { title: 'Compliance', description: 'We adhere strictly to all state and federal regulations.', icon: 'tabler:shield-check' },
-    ]}
-  />
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+         <img src="/src/assets/images/head.png" alt="Mobinu Shadhin" class="rounded-lg shadow-lg w-full h-auto" />
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold mb-4 dark:text-white">Mobinu Shadhin</h2>
+        <p class="text-lg text-secondary font-semibold mb-4">Founder & Principal Agent (NPN: 21430983)</p>
+        <p class="text-muted dark:text-slate-400">
+          As the principal agent, Mobinu brings a unique background in high-stakes sales and behavioral psychology to the insurance world. His focus is on navigating complex regulatory frameworks to deliver private, under-65 health plans that truly fit the client.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <CallToAction
-    actions={[{ variant: 'primary', text: 'Schedule a Consultation', href: '/contact', icon: 'tabler:phone' }]}
-    title="Let's find your perfect plan."
-    subtitle="Reach out today to speak directly with a licensed professional."
+    title="Ready to find a plan?"
+    actions={[{ variant: 'primary', text: 'Contact Us', href: '/contact' }]}
   />
 </Layout>
