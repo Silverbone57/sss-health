@@ -9,24 +9,24 @@ const team = [
   {
     name: 'Mobinu Shadhin',
     title: 'Founder & Principal Agent',
+    phone: '727-291-3930',
     image: '/head.png',
-    // Nudges the image up slightly and zooms in just a touch to center you
     imageClass: 'object-cover w-full h-full object-top scale-110', 
     description: 'Specializing in high-stakes sales and behavioral psychology to deliver private, under-65 health plans that truly fit the client.',
   },
   {
     name: 'Jefferson Shafin',
     title: 'Senior Health Advisor',
+    phone: '561-985-6493',
     image: '/head2.png',
-    // Zooms in by 35% and centers on his face
     imageClass: 'object-cover w-full h-full object-[center_15%] scale-[1.35]', 
     description: 'Expert health advisor specializing in comprehensive, multi-state coverage strategies and a dedicated, client-first approach.',
   },
   {
     name: 'Sarah Winchester',
     title: 'Executive Assistant',
+    phone: '727-304-5971',
     image: '/head4.png',
-    // Standard fit for Sarah
     imageClass: 'object-cover w-full h-full object-center', 
     description: 'Ensuring seamless operations, swift client onboarding, and dedicated administrative support for the entire advisory team.',
   }
@@ -52,7 +52,13 @@ const team = [
             />
           </div>
           <h2 class="text-2xl font-bold dark:text-white mb-1">{member.name}</h2>
-          <p class="text-secondary font-semibold mb-4">{member.title}</p>
+          <p class="text-secondary font-semibold mb-2">{member.title}</p>
+          <a 
+            href={`tel:${member.phone.replace(/-/g, '')}`} 
+            class="text-blue-600 dark:text-blue-400 font-medium hover:underline mb-4 flex items-center gap-2 transition duration-200"
+          >
+            📞 {member.phone}
+          </a>
           <p class="text-muted dark:text-slate-400 text-sm leading-relaxed italic">
             "{member.description}"
           </p>
