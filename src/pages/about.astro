@@ -18,6 +18,12 @@ const team = [
     image: '/head2.png',
     description: 'Expert advisor licensed across 12 states, focusing on delivering comprehensive health solutions with a client-first approach.',
   },
+  {
+    name: 'Sarah Winchester',
+    title: 'Executive Assistant',
+    image: '/head4.png',
+    description: 'Ensuring seamless operations, swift client onboarding, and dedicated administrative support for the entire advisory team.',
+  }
 ];
 ---
 
@@ -28,22 +34,21 @@ const team = [
     subtitle="SSS Health Solutions was founded by brothers who saw a flaw in the health insurance industry. We built this independent agency to provide genuine advisory over high-pressure sales."
   />
 
-  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 items-start">
-      {team.map(({ name, title, image, description }) => (
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-7xl">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start">
+      {team.map((member) => (
         <div class="flex flex-col items-center text-center p-6 border border-gray-200 dark:border-slate-800 rounded-xl shadow-sm bg-white dark:bg-slate-900">
           <div class="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-secondary shadow-md">
             <img 
-              src={image} 
-              alt={name} 
+              src={member.image} 
+              alt={member.name} 
               class="object-cover w-full h-full"
-              onerror="this.src='/favicon.ico'" 
             />
           </div>
-          <h2 class="text-2xl font-bold dark:text-white mb-1">{name}</h2>
-          <p class="text-secondary font-semibold mb-4">{title}</p>
+          <h2 class="text-2xl font-bold dark:text-white mb-1">{member.name}</h2>
+          <p class="text-secondary font-semibold mb-4">{member.title}</p>
           <p class="text-muted dark:text-slate-400 text-sm leading-relaxed italic">
-            "{description}"
+            "{member.description}"
           </p>
         </div>
       ))}
