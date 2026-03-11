@@ -10,18 +10,24 @@ const team = [
     name: 'Mobinu Shadhin',
     title: 'Founder & Principal Agent',
     image: '/head.png',
+    // Nudges the image up slightly and zooms in just a touch to center you
+    imageClass: 'object-cover w-full h-full object-top scale-110', 
     description: 'Specializing in high-stakes sales and behavioral psychology to deliver private, under-65 health plans that truly fit the client.',
   },
   {
     name: 'Jefferson Shafin',
     title: 'Senior Health Advisor',
     image: '/head2.png',
-    description: 'Expert advisor licensed across 12 states, focusing on delivering comprehensive health solutions with a client-first approach.',
+    // Zooms in by 35% and centers on his face
+    imageClass: 'object-cover w-full h-full object-[center_15%] scale-[1.35]', 
+    description: 'Expert health advisor specializing in comprehensive, multi-state coverage strategies and a dedicated, client-first approach.',
   },
   {
     name: 'Sarah Winchester',
     title: 'Executive Assistant',
     image: '/head4.png',
+    // Standard fit for Sarah
+    imageClass: 'object-cover w-full h-full object-center', 
     description: 'Ensuring seamless operations, swift client onboarding, and dedicated administrative support for the entire advisory team.',
   }
 ];
@@ -42,7 +48,7 @@ const team = [
             <img 
               src={member.image} 
               alt={member.name} 
-              class="object-cover w-full h-full"
+              class={member.imageClass}
             />
           </div>
           <h2 class="text-2xl font-bold dark:text-white mb-1">{member.name}</h2>
@@ -57,9 +63,9 @@ const team = [
 
   <section class="bg-blue-50 dark:bg-slate-800 py-12 px-4 mb-16 rounded-lg max-w-6xl mx-auto">
     <div class="text-center">
-      <h3 class="text-xl font-bold mb-4">Our Combined Coverage</h3>
-      <p class="text-sm text-gray-600 dark:text-gray-300">
-        Active in: FL, TX, MD, MO, LA, NC, VA, TN, GA, MI, OH, KY.
+      <h3 class="text-xl font-bold mb-4">Our National Coverage</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+        Active in: AL, AR, CA, CO, DE, FL, GA, IA, ID, IL, IN, KS, LA, MD, MI, MO, MS, MT, NC, NV, NY, OH, OK, SC, SD, TN, TX, UT, VA, WI, WV, WY.
       </p>
     </div>
   </section>
