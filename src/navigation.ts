@@ -38,7 +38,6 @@ export const footerData = {
   secondaryLinks: [
     { text: 'SSS Health Solutions LLC', href: '/' },
   ],
-  footNote: `
-    Proudly providing health coverage in: FL, TX, MD, MO, LA, NC, VA, TN, GA, MI, OH, KY. · All rights reserved.
-  `,
+  socialLinks: [],
+  footNote: `Proudly providing health coverage in: FL, TX, MD, MO, LA, NC, VA, TN, GA, MI, OH, KY. · All rights reserved.`,
 };
