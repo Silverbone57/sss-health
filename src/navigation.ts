@@ -1,59 +1,28 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
-
-export const headerData = {
-  links: [
-    {
-      text: 'Home',
-      href: '/',
-    },
-    {
-      text: 'Services',
-      href: '/#features',
-    },
-    {
-      text: 'About Us',
-      href: '/about',
-    },
-    {
-      text: 'Contact',
-      href: '/contact',
-    },
-  ],
-  actions: [{ text: 'Get a Quote', href: '/contact', target: '_blank' }],
-};
-
 export const footerData = {
   links: [
     {
-      title: 'Services',
+      title: 'Company',
       links: [
-        { text: 'Individual Health Plans', href: '/#features' },
-        { text: 'Family Health Coverage', href: '/#features' },
-        { text: 'Private PPO Networks', href: '/#features' },
+        { text: 'About', href: '/about' },
+        { text: 'Contact', href: '/contact' },
       ],
     },
     {
-      title: 'Agency',
+      title: 'Legal',
       links: [
-        { text: 'About SSS Health Solutions', href: '/about' },
-        { text: 'Contact Us', href: '/contact' },
+        { text: 'Privacy Policy', href: '/privacy' },
+        { text: 'Terms and Conditions', href: '/terms' },
       ],
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'SSS Health Solutions LLC', href: '/' },
   ],
   socialLinks: [
-    // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    // { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    // { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    // { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: '#' },
+    // Add social links here if you have them
   ],
   footNote: `
-    <strong>SSS Health Solutions LLC</strong><br />
-    National Producer Number (NPN): 21430983<br />
-    Licensed for Life & Health in FL, SC, VA, AR, MI, OH, TX, TN, MS, MD, KS, and IA.<br />
-    <span class="text-sm text-gray-500 dark:text-gray-400">Not affiliated with the U.S. government or the federal Medicare program.</span>
+    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm"></span>
+    Proudly providing health coverage in: FL, TX, MD, MO, LA, NC, VA, TN, GA, MI, OH, KY. · All rights reserved.
   `,
 };
