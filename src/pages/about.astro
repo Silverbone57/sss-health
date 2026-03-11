@@ -4,6 +4,21 @@ import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = { title: 'About Us | SSS Health Solutions' };
+
+const team = [
+  {
+    name: 'Mobinu Shadhin',
+    title: 'Founder & Principal Agent',
+    image: '/head.png',
+    description: 'Specializing in high-stakes sales and behavioral psychology to deliver private, under-65 health plans that truly fit the client.',
+  },
+  {
+    name: 'Jefferson Shafin',
+    title: 'Senior Health Advisor',
+    image: '/head2.png',
+    description: 'Expert advisor licensed across 12 states, focusing on delivering comprehensive health solutions with a client-first approach.',
+  },
+];
 ---
 
 <Layout metadata={metadata}>
@@ -13,18 +28,34 @@ const metadata = { title: 'About Us | SSS Health Solutions' };
     subtitle="SSS Health Solutions was founded by brothers who saw a flaw in the health insurance industry. We built this independent agency to provide genuine advisory over high-pressure sales."
   />
 
-  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <div>
-         <img src="/head.png" alt="Mobinu Shadhin" class="rounded-lg shadow-lg w-full h-auto" />
-      </div>
-      <div>
-        <h2 class="text-3xl font-bold mb-4 dark:text-white">Mobinu Shadhin</h2>
-        <p class="text-lg text-secondary font-semibold mb-4">Founder & Principal Agent (NPN: 21430983)</p>
-        <p class="text-muted dark:text-slate-400">
-          As the principal agent, Mobinu brings a unique background in high-stakes sales and behavioral psychology to the insurance world. His focus is on navigating complex regulatory frameworks to deliver private, under-65 health plans that truly fit the client.
-        </p>
-      </div>
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 items-start">
+      {team.map(({ name, title, image, description }) => (
+        <div class="flex flex-col items-center text-center p-6 border border-gray-200 dark:border-slate-800 rounded-xl shadow-sm bg-white dark:bg-slate-900">
+          <div class="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-secondary shadow-md">
+            <img 
+              src={image} 
+              alt={name} 
+              class="object-cover w-full h-full"
+              onerror="this.src='/favicon.ico'" 
+            />
+          </div>
+          <h2 class="text-2xl font-bold dark:text-white mb-1">{name}</h2>
+          <p class="text-secondary font-semibold mb-4">{title}</p>
+          <p class="text-muted dark:text-slate-400 text-sm leading-relaxed italic">
+            "{description}"
+          </p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-blue-50 dark:bg-slate-800 py-12 px-4 mb-16 rounded-lg max-w-6xl mx-auto">
+    <div class="text-center">
+      <h3 class="text-xl font-bold mb-4">Our Combined Coverage</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300">
+        Active in: FL, TX, MD, MO, LA, NC, VA, TN, GA, MI, OH, KY.
+      </p>
     </div>
   </section>
 
