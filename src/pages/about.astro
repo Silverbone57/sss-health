@@ -5,7 +5,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = { title: 'About Us | SSS Health Solutions' };
 
-const team = [
+const leadership = [
   {
     name: 'Mobinu Shadhin',
     title: 'Founder & Principal Agent',
@@ -22,6 +22,17 @@ const team = [
     imageClass: 'object-cover w-full h-full object-[center_15%] scale-[1.35]', 
     description: 'Expert health advisor specializing in comprehensive, multi-state coverage strategies and a dedicated, client-first approach.',
   },
+  {
+    name: 'Munem Shadh',
+    title: 'Managing Partner & Advisor',
+    phone: '954-270-1242',
+    image: '/head3.png',
+    imageClass: 'object-cover w-full h-full object-center scale-110', 
+    description: 'Driving strategic client growth and specializing in structuring long-term, premium health portfolios for individuals and families.',
+  }
+];
+
+const support = [
   {
     name: 'Sarah Winchester',
     title: 'Executive Assistant',
@@ -41,9 +52,10 @@ const team = [
   />
 
   <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-7xl">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start">
-      {team.map((member) => (
-        <div class="flex flex-col items-center text-center p-6 border border-gray-200 dark:border-slate-800 rounded-xl shadow-sm bg-white dark:bg-slate-900">
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start mb-12">
+      {leadership.map((member) => (
+        <div class="flex flex-col items-center text-center p-6 border border-gray-200 dark:border-slate-800 rounded-xl shadow-sm bg-white dark:bg-slate-900 h-full">
           <div class="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-secondary shadow-md">
             <img 
               src={member.image} 
@@ -65,6 +77,36 @@ const team = [
         </div>
       ))}
     </div>
+
+    <div class="w-full max-w-3xl mx-auto h-px bg-gray-200 dark:bg-slate-800 my-12"></div>
+
+    <div class="flex justify-center">
+      <div class="w-full max-w-sm">
+        {support.map((member) => (
+          <div class="flex flex-col items-center text-center p-6 border border-gray-100 dark:border-slate-800/50 rounded-xl bg-gray-50 dark:bg-slate-800/20 h-full">
+            <div class="relative w-40 h-40 mb-6 overflow-hidden rounded-full border-2 border-gray-300 dark:border-slate-600 shadow-sm">
+              <img 
+                src={member.image} 
+                alt={member.name} 
+                class={member.imageClass}
+              />
+            </div>
+            <h2 class="text-xl font-bold dark:text-white mb-1">{member.name}</h2>
+            <p class="text-secondary font-medium mb-2">{member.title}</p>
+            <a 
+              href={`tel:${member.phone.replace(/-/g, '')}`} 
+              class="text-blue-600 dark:text-blue-400 font-medium hover:underline mb-4 flex items-center gap-2 transition duration-200"
+            >
+              📞 {member.phone}
+            </a>
+            <p class="text-muted dark:text-slate-400 text-sm leading-relaxed italic">
+              "{member.description}"
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
   </section>
 
   <section class="bg-blue-50 dark:bg-slate-800 py-12 px-4 mb-16 rounded-lg max-w-6xl mx-auto">
